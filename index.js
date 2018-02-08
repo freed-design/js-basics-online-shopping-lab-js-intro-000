@@ -48,7 +48,17 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var noMatch = true
+  for (let n=0; n<cart.length; n++){
+    if (Objet.keys(cart[n]).hasOwnProperty(item)){
+      cart.splice(n, 1)
+      noMatch = false
+    }    
+  }
+  if (noMatch){
+    console.log("That item is not in your cart.")
+  }
+  return cart
 }
 
 function placeOrder(cardNumber) {
