@@ -53,7 +53,7 @@ function removeFromCart(item) {
     if (Objet.keys(cart[n]).hasOwnProperty(item)){
       cart.splice(n, 1)
       noMatch = false
-    }    
+    }
   }
   if (noMatch){
     console.log("That item is not in your cart.")
