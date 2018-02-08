@@ -50,7 +50,7 @@ function total() {
 function removeFromCart(item) {
   var noMatch = true
   for (let n=0; n<cart.length; n++){
-    if (Object.keys(cart[n]).hasOwnProperty(item)){
+    if (cart[n].hasOwnProperty(item)){
       cart.splice(n, 1)
       noMatch = false
     }
